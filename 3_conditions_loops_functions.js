@@ -53,3 +53,49 @@ Loops---------------------------------------------------------------------------
 //   console.log(i); 
 // }
 
+
+// ==============================================================================
+// iterating list array and printing numbers only
+// const x = ["one", "two", "three", "four", 20, 30, 40, 50];
+
+// for (let i=0; i < x.length; i++){
+//   if (typeof x[i] === "number"){
+//     console.log(x[i]);
+//   }
+// }
+
+
+// iterating list array and printing strings only
+// const x = ["one", "two", "three", "four", 20, 30, 40, 50];
+
+// for (let i=0; i < x.length; i++){
+//   if (typeof x[i] === "string"){
+//     console.log(x[i]);
+//   }
+// }
+// ==============================================================================
+
+
+
+// Function Example..............................................................
+// to invoke the function immediately.
+// (function my_func(){
+//   console.log("My First Function");
+// }())
+
+
+// the arrow function--------------------------------------------------------------
+// const arrowFunct = () => {
+//   console.log("arrow function");
+// }
+// arrowFunct();
+
+
+// reversing a string in JavaScript.-----------------------------------------------
+// let x = "Nathan";
+// // convert to list with split() method
+// y = x.split("");
+// // apply the list inbuilt (reverse() function) on the new list, then join("") to convert back to string.
+// z = y.reverse().join("");
+
+// console.log(z);
