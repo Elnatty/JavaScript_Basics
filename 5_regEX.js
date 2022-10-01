@@ -34,12 +34,9 @@
   (|) --> represents or i.e console.log(/(hanny | natty/.test(phrase1));  -> true
 
   Quantifiers=======================================================================
-  
-
+  Example 1:
+  const str = "Hello World, 2022 @ more of a String"; 
+  // match all characters.
+  console.log(/.+/.exec(str));
 */
 
-const phrase1 = "i am natty";
-// testing for uppercase letters
-console.log(/[A-Z]/.test(phrase1));   // -> outputs false
-// testing for lowercase letters
-console.log(/[a-zA-z]/.test(phrase1));   // -> outputs true
