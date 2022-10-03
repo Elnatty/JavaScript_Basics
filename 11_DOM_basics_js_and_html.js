@@ -1,5 +1,5 @@
 /*
-DOM Documentation Definition:
+⁡⁣⁣⁢DOM Documentation Definition:⁡
 The Document Object Model (DOM) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.
 The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's structure, style, or content.
 Nodes can also have event handlers attached to them. Once an event is triggered, the event handlers get executed.
@@ -8,7 +8,7 @@ How to locate official DOM documentation, goto:
 MDM web docs -> References -> Web Apis -> DOM -> Document.
 
 
-How to Use the DOM Elements API to write html code with javascript..............
+⁡⁣⁣⁢How to Use the DOM Elements API to write html code with javascript..............⁡
 
 Step 1: Create a DOM Element, Attribute and TextNode:
 The DOM Elements API uses the following format to create HTML tags/elements, attributes and textNodes with JavaScript.
@@ -53,7 +53,7 @@ NOTE: best way to identify the element!
 
 
 
-Example 1: Make a button on the screen perform an action of displaying a paragraph after every click.
+⁡⁣⁣⁢Example 1: Make a button on the screen perform an action of displaying a paragraph after every click.⁡
 
 Using this button as case study:
 <button id="btn-1" class="my-btn"> Click Me </button>
@@ -94,7 +94,7 @@ NOTE: we commonly use the .onclick event.
 
 
 =================================================================================
-How to Navigate an HTML DOM Element.
+⁡⁣⁣⁢How to Navigate an HTML DOM Element.⁡
 Example: Using this html as case study: 👇👇👇
 
 <div class="main-body">
@@ -113,7 +113,7 @@ Example: Using this html as case study: 👇👇👇
 
 
 --------------------------------------------------------------------------------
-// navigating the list item.
+navigating the list item.
 const list = document.querySelector('ul');
 const newItem = list.children[0]  // outputs the list item using indexing format.
 or
@@ -121,7 +121,7 @@ const newItem = list.children.item(0) // outputs the list item using indexing fo
 
 
 
-// modifying the list item with the document.textContent.
+// modifying the textContent item with the document.textContent.
 newItem.textContent = "New list item";
 
 
@@ -137,9 +137,55 @@ if:
 
 
 
+=================================================================================================
+⁡⁣⁣⁢‍How to insert new elements into any location within the html document:⁡
+To do this, we use the .insertBefore method
+
+Step 1:-------------------------------------------------------------------------
+identify the parent element that house the position where the new element is to be inserted.
+
+const parent = document.querySelector('ul');
+
+Step 2:
+Identify the element that is located after the position you want to insert the new element.
+
+const pElem = parent.children[1];	// item is going to be placed before this element/tag.
+
+step 3:
+Create the new element.
+
+const newElement = document.createElement('li');
+
+Step 4:
+use the .insertBefore method to insert the new element.
+
+parent.insertBefore(newElement, pElem); // takes 2 arguments.
 
 
-=================================================================================
+
+
+
+=============================================================================================
+⁡⁣⁣⁢How to remove existing elements from the Html Document using .innerHTML method.⁡
+
+// using this as case study.
+const container = document.querySelector('.content');
+// if .content exists, then remove it.
+if (container){
+	container.innerHTML = '';
+} else {
+	container.appendChild(newElement);
+}
+
+or
+
+you can write a clear function.
+
+function clear() {
+	const container = document.querySelector('.content');
+	// clear the container
+	container.innerHTML = '';
+}
 
 
 
