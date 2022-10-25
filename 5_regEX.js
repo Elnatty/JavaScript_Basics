@@ -31,7 +31,11 @@
   \w  --> matches all alphanumeric
   ^   --> begining of a string
   $   --> ending of a string
-  (|) --> represents or i.e console.log(/(hanny | natty/.test(phrase1));  -> true
+  (|) --> represents or i.e console.log(/(hanny | natty/.test(phrase1));
+  ?   --> matches one occurrence of a string.
+  \b  --> boundary of a word/sentence (start and end of a word) eg: /bcat/b -> matches "cat".
+  
+
 
   Quantifiers=======================================================================
   Example 1:
