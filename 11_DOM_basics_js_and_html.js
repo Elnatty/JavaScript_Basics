@@ -8,21 +8,21 @@ How to locate official DOM documentation, goto:
 MDM web docs -> References -> Web Apis -> DOM -> Document.
 
 
-⁡⁣⁣⁢How to Use the DOM Elements API to write html code with javascript..............⁡
+⁡⁣⁣⁢How to Use the DOM Elements API to write html code with javascript..............⁡⁡⁣⁣⁢How to create html ELEMENTS WITH JavaScript⁡
 
-Step 1: Create a DOM Element, Attribute and TextNode:
+⁡⁢⁣⁢Step 1:⁡ Create a DOM Element, Attribute and TextNode:
 The DOM Elements API uses the following format to create HTML tags/elements, attributes and textNodes with JavaScript.
---> const elementNode = document.createElement('div'); // to create a div tag/element.
---> const attributeNode = document.createAttribute('class' or 'id');  // to create attributes for the div elements/tags.
+--> const elementNode = ⁡⁢⁣⁢document.createElement('div')⁡; // to create a div tag/element.
+--> const attributeNode = ⁡⁢⁣⁢document.createAttribute('class' or 'id')⁡;  // to create attributes for the div elements/tags.
 --> const textNode = document.createTextNode('Content'); // to create a text node.
 
-Step 2: put the textNode into the element/tag:
+⁡⁢⁣⁢Step 2:⁡ put the textNode into the element/tag:
 --> elementNode.appendChild(textNode); // put the textNode into the element/tag:
 
-Step 3: Assign the attributeNode a value:
+⁡⁢⁣⁢Step 3:⁡ Assign the attributeNode a value:
 --> attributeNode.value = "some-class"; // assign the attributeNode a value.
 
-Step 4: Connect the attributeNode to the element/tag:
+⁡⁢⁣⁢Step 4:⁡ Connect the attributeNode to the element/tag:
 --> elementNode.setAttributeNode(attributeNode); // connect the attributeNode to the element/tag.
 
 or 
@@ -34,12 +34,13 @@ or
 
 elementNode.setAttribute('class', 'some-class'); // set the attributeNode to the element/ tag directly..
 
-Step 5: Display everything on the screen:
+⁡⁢⁣⁢Step 5:⁡ Display everything on the screen:
 document.body.appendChild(elementNode); // display everything on the screen.
 ==================================================================================================================================================================
 <button id="btn-1" class="my-btn"> Click Me </button>
 using 👆👆 as case study.
-Document methods:
+
+⁡⁣⁢⁣Document methods:⁡⁡
 1: The document.querySelector()
 to search for elements: 
 # -> represents the id     // document.querySelector('#btn-1'); returns the id.
@@ -60,10 +61,10 @@ Using this button as case study:
 
 
 SOLUTION:
-Step 1: use the DOM element to identify the button:
+⁡⁢⁣⁢Step 1:⁡ use the DOM element to identify the button:
 document.querySelector('button');
 
-Step 2: Create a JS function that will print random numbers when the button is clicked.
+⁡⁢⁣⁢Step 2:⁡ Create a JS function that will print random numbers when the button is clicked.
 cont btn = document.querySelector('#btn-1'); // identifies the button.
 
 function addParagraph(){
@@ -141,22 +142,22 @@ if:
 ⁡⁣⁣⁢‍How to insert new elements into any location within the html document:⁡
 To do this, we use the .insertBefore method
 
-Step 1:-------------------------------------------------------------------------
+⁡⁢⁣⁢Step 1:⁡
 identify the parent element that house the position where the new element is to be inserted.
 
 const parent = document.querySelector('ul');
 
-Step 2:
+⁡⁢⁣⁢Step 2:⁡
 Identify the element that is located after the position you want to insert the new element.
 
 const pElem = parent.children[1];	// item is going to be placed before this element/tag.
 
-step 3:
+⁡⁢⁣⁢step 3:⁡
 Create the new element.
 
 const newElement = document.createElement('li');
 
-Step 4:
+⁡⁢⁣⁢Step 4:⁡
 use the .insertBefore method to insert the new element.
 
 parent.insertBefore(newElement, pElem); // takes 2 arguments.
@@ -189,8 +190,38 @@ function clear() {
 
 
 
+⁡⁣⁣⁢How to Push/Add an input field value into an arra⁡y
+// push input field into an array.
+let arr = [] 	// an empty array
+let inputArr = document.getElementById("input-El") // an element with the input tag.
+arr.push(inputArr.value)   // pushing/adding the input into the array.
+
+
+⁡⁣⁣⁢// Use .innerHTML to render a Buy! button inside the div container⁡
+let divCon = document.getElementById("container")
+divCon.innerHTML = "<button>Buy!</button>"
+
+
+
+⁡⁣⁣⁢Example 1: innerHTML use cases⁡
+const container = document.getElementById("container")
+container.innerHTML = "<button id='btn', onclick='buy()'>Buy!</button>"
+
+// When clicked, render a paragraph under the button (in the container)
+// that says "Thank you for buying!"
+function buy() {
+    container.innerHTML += "<p>Thank you for Buying!</p>"
+}
+
+⁡⁣⁣⁢⁡⁣⁣⁢or⁡⁡
+
+const p = document.createElement("p")	// create the p element.
+p.textContent = "Thank you for Buying!" // text for the p element.
+container.appendChild(p) // add the p element to the container element.
+
 
 
 
 
 */
+
