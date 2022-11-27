@@ -222,6 +222,36 @@ container.appendChild(p) // add the p element to the container element.
 
 
 
+⁡⁣⁣⁢Example 2: Passing an array into an 'a' element, using 'a for - Loop' and `${}` formatting.
+
+⁡⁣⁢⁣let myLeads = []⁡⁡
+let listItems = ""
+for (let i = 0; i < myLeads.length; i++) {
+		listItems += `
+			<li>
+					<a target="_blank" href="${myLeads[i]}">${myLeads[i]}</a>
+			</li>
+		`
+}
+ulEl.innerHTML = listItems 
+
+
+
+
+⁡⁣⁣⁢Working with localStorage⁡: Note: both key and values must be strings data types.
+localStorage.setItem('key', 'value')		// to set/store
+localStorage.getItem('key')							// to get/retrieve.
+localStorage.clear()
+
+⁡⁣⁣⁢Converting Strings to Array and Arrays back to strings.⁡
+JSON.stringify(x) // array to string
+JSON.parse(x) //  string to array
+
+
+
+
+
 
 */
-
+const tabs = [{url: "https://www.google.com"}]
+console.log(tabs[0].url)
