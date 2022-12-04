@@ -14,7 +14,7 @@ MDM web docs -> References -> Web Apis -> DOM -> Document.
 The DOM Elements API uses the following format to create HTML tags/elements, attributes and textNodes with JavaScript.
 --> const elementNode = ⁡⁢⁣⁢document.createElement('div')⁡; // to create a div tag/element.
 --> const attributeNode = ⁡⁢⁣⁢document.createAttribute('class' or 'id')⁡;  // to create attributes for the div elements/tags.
---> const textNode = document.createTextNode('Content'); // to create a text node.
+--> const textNode = ⁡⁢⁣⁢⁡⁢⁣⁡⁢⁣⁢document.createTextNode('Content')⁡; // to create a text node.
 
 ⁡⁢⁣⁢Step 2:⁡ put the textNode into the element/tag:
 --> elementNode.appendChild(textNode); // put the textNode into the element/tag:
@@ -79,11 +79,12 @@ function addParagraph(){
 	document.body.appendChild(newElement);
 }
 
-// event listener for when button is clicked.
+
+
+⁡⁣⁣⁢Event listener for when button is clicked.⁡
 btn.onclick = addParagraph;
 
-
----> Ways to add an event listener to the button when the button is clicked.
+Ways to add an event listener to the button when the button is clicked.⁡
 1: btn.addEventListener('click', addParagraph); or
 2: btn.onclick = addParagraph;
 3: add it on the html code block: 

@@ -1,27 +1,28 @@
 /* --------------> variables declaration and assignment.
-1  const: is used when you want to assign a permanent value to an object.
+⁡⁣⁣⁢1  const:⁡ is used when you want to assign a permanent value to an object.
           when using const: the value assigned never change!
-2  let: is used when you want to be able to reassign values to objects or      variables
+⁡⁣⁣⁢2  let:⁡ is used when you want to be able to reassign values to objects or      variables
 
 
------------------> Data Types.
-1: nubmer
+⁡⁣⁣⁢-----------------> Data Types.⁡
+⁡⁣⁣⁢1: number
 2: string
-3: boolean
+3: boolean⁡
 example: 
         const variable1=10; const variable2="Money"; const variable3=false;
-to get data type:
+        to get data type:
+
         typeof variable1 --> results number.
         typeof variable2 --> results string.
         typeof variable3 --> results boolean.
 Note: ---> Number() is just like int() function in python --> ie, you can convert string into integer/Number to perform mathematical operations.
-4: Array
+⁡⁣⁣⁢4: Array⁡
 exmple:
       const array1 = [10, "name", {"boy":100}, [20, 44]];
   assessed by indexing: array1[0]; --> results 10. etc.
 
 
-5: Objects in Javascript.
+⁡⁣⁣⁢5: Objects in Javascript.⁡
 Objects in JavaScript is a key-value pair, just like dictionary in python.
 example: 
         const objectVariable = {prop1:20, prop2:50, prop3:70};

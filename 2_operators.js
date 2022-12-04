@@ -1,11 +1,12 @@
 /*
 -------------------------------> JavaScript Operators
-1: Arithmetic
+⁡⁣⁣⁢1: Arithmetic
 2: Assignment
-3: Comparism
+3: Comparison
 4: Logical
+⁡⁣⁣⁢5: Ternary⁡⁡
 
-1----------------> Arithmetic Operators (+, -, /, *, %, ++, --)
+1----------------> Arithmetic Operators (+, -, /, *, %, ++, -- and exponent '**')
     const sum1 = 3 + 5 / 2;
 
 2----------------> Assignment Operators (=, +=, -+, *=, /=)

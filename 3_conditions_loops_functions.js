@@ -84,11 +84,11 @@ Loops---------------------------------------------------------------------------
 // }())
 
 
-// the arrow function--------------------------------------------------------------
-// const arrowFunct = () => {
+// the arrow function--------------------------------------------------------
+// const arrowFunc = () => {
 //   console.log("arrow function");
 // }
-// arrowFunct();
+// arrowFunc();
 
 
 // reversing a string in JavaScript.-----------------------------------------------
