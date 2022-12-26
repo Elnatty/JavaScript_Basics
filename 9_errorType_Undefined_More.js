@@ -1,8 +1,8 @@
 /*
-Error Handling==================================================================
-1: Reference error -> when a non-existant variable is refenced
+⁡⁣⁣⁢Error Handling=======================================================⁡
+1: Reference error -> when a non-existent variable is referenced
 2: Syntax error -> invalid javascript.
-3: Type error -> executing a method or operation on a data type that dosent have that method.
+3: Type error -> executing a method or operation on a data type that doesn't have that method.
 
 example of error handling------------------------------------------------------
 try {
@@ -19,7 +19,7 @@ catch(e) {
 
 
 Other Data Types===============================================================
-NaN (not a number), null(intentional absense of a variable), undefined
+NaN (not a number), null(intentional absence of a variable), undefined
 
 // Example -> filter for numbers from this array ================================
 var x = [1,2,3,'f', 'r', -1, -2, -3]

@@ -41,15 +41,21 @@ document.body.appendChild(elementNode); // display everything on the screen.
 using 👆👆 as case study.
 
 ⁡⁣⁢⁣Document methods:⁡⁡
-1: The document.querySelector()
+⁡⁢⁣⁢1: The document.querySelector()⁡⁡
 to search for elements: 
 # -> represents the id     // document.querySelector('#btn-1'); returns the id.
 . -> represents the class // document.querySelector('.my-btn') returns the class.
+<> -> represents the tag // document.querySelector('button') returns the tag.
 
-2: The document.getElementById()
+⁡⁢⁣⁢2: The document.getElementById()⁡
 another way to search for elements:
 document.getElementById("my-btn") // returns the whole button string.
 NOTE: best way to identify the element!
+
+⁡⁢⁣⁢3: The document.querySelectorAll()⁡
+document.querySelectorAll("button") // or⁡
+document.querySelectorAll(".my-btn") // or
+document.querySelectorAll("#btn-1")
 
 
 
@@ -115,7 +121,7 @@ Example: Using this html as case study: 👇👇👇
 
 
 --------------------------------------------------------------------------------
-navigating the list item.
+⁡⁣⁣⁢navigating the list item.⁡
 const list = document.querySelector('ul');
 const newItem = list.children[0]  // outputs the list item using indexing format.
 or
@@ -135,9 +141,18 @@ if:
 2 --> means Attribute of an element/tag.
 3 --> means actual text inside the element/tag. etc.
 
+⁡⁣⁣⁢Adding New Item to the List⁡
+list.appendChild(document.createElement('li')).textContent = "Added Content"
+
+or specify the particular index location.
+
+let x = list.appendChild(document.createElement('li')).textContent = "Added Content"
+list.children.item(0) or list.children[0]
 
 
-
+⁡⁣⁣⁢How to select specific parent elements: (using the querySelectorAll)
+document.querySelectorAll("p").item(1)  -> 1 represents the index.
+⁡
 
 =================================================================================================
 ⁡⁣⁣⁢‍How to insert new elements into any location within the html document:⁡

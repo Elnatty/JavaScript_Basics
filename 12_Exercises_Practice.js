@@ -318,6 +318,146 @@ function descendingOrder(n){
   return Number(n.toString().split("").map(arrN => +arrN).sort((a,b) => b - a).join(""))
 }
 
+⁡⁣⁣⁢
+24: In this katar you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.⁡
+function filter_list(l) {
+  return l.filter(fil => typeof(fil) === 'number')
+}
+
+
+⁡⁣⁣⁢25: ⁡
+// Example 2 -> difference between 2 arrays
+let a = [1,2,2,3,4];
+let b = [1,2];
+// difference between 2 arrays.
+console.log(a.filter(x => !b.includes(x)))
+
+
+⁡⁣⁣⁢26: Given: an array containing hashes of names Return: a string formatted as a list of names separated by commas except for the last two names, which should be separated by an ampersand.⁡
+function list(names){
+  let finalString = '';
+  
+  if (names.length === 1) return names[0].name;
+  
+  names.forEach((arrItem, arrIndex) => {
+    const name = arrItem.name;
+    if (arrIndex === names.length - 1) finalString = finalString + ' & ' + name;
+    else if (arrIndex === names.length - 2) finalString = finalString + name;
+    else finalString = finalString + name + ', ';
+  })
+  return finalString;
+};
+
+
+⁡⁣⁣⁢27: Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.⁡
+
+For example (Input --> Output):
+solution:
+function persistence(num) {
+   let times = 0;
+  num = num.toString();
+  while (num.length > 1){
+    times++;
+    num = num.split('').map(Number).reduce((a, b) => a*b).toString()
+  }
+  return times;
+}
+
+
+⁡⁣⁣⁢28: ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+If the function is passed a valid PIN string, return true, else return false.⁡
+function validatePIN (pin) {
+  //return true or false
+  return /^(\d{4}|\d{6})$/.test(pin);
+}
+
+
+⁡⁣⁣⁢29: Your task is simply to count the total number of lowercase letters in a string.⁡
+function lowercaseCount(str){
+  let num = 0
+  let strArr = str.split("")
+  strArr.forEach(arrItem => {
+    if (/[a-z]/.test(arrItem)) num++
+  })
+  return num
+}
+
+or
+
+function lowercaseCount(str){
+  const res = str.match(/[a-z]/g);
+  
+  return res ? res.length : 0
+}
+
+or
+
+function lowercaseCount(str){
+    return (str.match(/[a-z]/g) || []).length
+}
+
+
+
+⁡⁣⁣⁢30: Write a simple function that takes a Date as a parameter and returns a Boolean representing whether the date is today or not.
+Make sure that your function does not return a false positive by only checking the day.⁡
+function isToday(date) {
+  return new Date().toDateString() === date.toDateString()
+}
+
+
+⁡⁣⁣⁢31: Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+The input will be a lowercase string with no spaces.
+Good luck!⁡
+function capitalize(s){
+  const a = s.split("");
+  const b = s.split("");
+  a.forEach((item, index, arr) => {
+    if (index % 2 === 0){
+      arr[index] = arr[index].toUpperCase();
+    } 
+  });
+  b.forEach((item, index, arr) => {
+    if (index % 2 !== 0){
+      arr[index] = arr[index].toUpperCase();
+    } 
+  });
+
+  return [a.join(""), b.join("")];
+}
+or
+function capitalize(s){
+  const odd = s.split("").map((l, i) => i % 2 !== 0 ? l.toUpperCase() : l).join("");
+  const even = s.split("").map((l, i) => i % 2 === 0 ? l.toUpperCase() : l).join("");
+  return [even, odd];
+};
+
+
+
+
+
+
+
+
+
+⁡⁣⁣⁢DOM EXERCISES HTML + JavaScrip 👇👇👇 -------------------------------------⁡
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

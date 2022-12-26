@@ -5,3 +5,5 @@ const arr = ['this', 'is', 'super', 'story'];
 const randIndex = Math.floor(arr.length * Math.random());
 console.log(arr[randIndex])
 */
+
+
