@@ -71,7 +71,7 @@ SOLUTION:
 document.querySelector('button');
 
 ⁡⁢⁣⁢Step 2:⁡ Create a JS function that will print random numbers when the button is clicked.
-cont btn = document.querySelector('#btn-1'); // identifies the button.
+const btn = document.querySelector('#btn-1'); // identifies the button.
 
 function addParagraph(){
 	// creating a random number btw 0 and 100.
@@ -262,6 +262,33 @@ localStorage.clear()
 ⁡⁣⁣⁢Converting Strings to Array and Arrays back to strings.⁡
 JSON.stringify(x) // array to string
 JSON.parse(x) //  string to array
+
+
+
+⁡⁣⁣⁢Working with 'data'/'dataset DOM manipulation⁡
+for example:
+const elem = document.createElement("h1")
+elem.innerText = "To Test"
+elem.setAttribute('data-call', 'check if working')
+
+we can assign the 'data-' to an element just like id or class attributes. So any value after 'data-' can be used to access the html element. 
+To call it after declaring in line 272;
+we can console.log(elem.dataset.call) and get 'check if working'
+
+
+
+⁡⁣⁣⁢Manipulating CSS styles using JS with the DOM api⁡
+1, you can;
+elem.setAttribute('class', 'red') // write some css styles to make background red ie; .red {background-color: red;}
+or
+elem.style.background-color = 'red'; // to do it immediately.
+elem.style.padding = '20px'
+elem.style.margin = '10px'
+elem.style.display = 'flex' e.t.c
+
+
+
+
 
 
 
