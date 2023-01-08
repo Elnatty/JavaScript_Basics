@@ -32,7 +32,8 @@ getResponse()⁡
 
 
 ⁡⁣⁢⁣​‌‍‌2: POST
-⁡​
+⁡
+​
 Adding content to the server/api using POST method
 
 ---> url to be fetched
