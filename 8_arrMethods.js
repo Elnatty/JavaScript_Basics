@@ -71,7 +71,13 @@ console.log(arr.includes('orange'))
 or
 console.log(arr.indexOf('orange') !== -1)   // meaning if 'orange' exist it wont equal -1 so it prints true.
 
+
 ⁡⁣⁣⁢filter()⁡ -> filter elements in an array.
+example:
+arr = [10,20,30,40,50];
+const x = arr.filter(arrIt => arrIt < 40)
+console.log(x); // outputs [10, 20, 30]
+
 
 ⁡⁣⁣⁢reduce()⁡ -> to find sum, average of arrays.
 example:
