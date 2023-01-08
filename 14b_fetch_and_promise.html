@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <!-- <p></p>  --tag to add--> 
+  </div>
+
+
+  <script>
+    // the url to work with
+    const url = "https://jsonplaceholder.typicode.com"
+
+    const divElement = document.getElementById("container")
+    
+    // function to get promise, by using async and await
+    async function getResponse() {
+      const response = await fetch(`${url}/posts`)
+      const data = await response.json()
+      return data
+    }
+    
+    // creating new element1
+    function createElement(post) {
+      const pElement = document.createElement("p")
+      const aElement = document.createElement("a")
+
+      aElement.innerHTML = `<b>Body ${post.id}:</b> ${post.body}`
+      aElement.setAttribute("href", `${url}/posts/${post.id}`)
+
+      pElement.appendChild(aElement)
+      
+
+      return pElement
+    }
+    // creating new element2
+    function createElement2(post) {
+      const pElement = document.createElement("p")
+
+      pElement.innerHTML = `<b>Title ${post.id}:</b> ${post.title}`
+      
+      return pElement
+    }
+
+
+    // appending everything
+    function addPosts() {
+      getResponse().then(posts => {
+        for (const post of posts) {
+          // adding both pTas to the parent div container
+          divElement.appendChild(createElement(post))
+          divElement.appendChild(createElement2(post))
+        }
+      })
+    }
+    addPosts()
+
+    
+  </script>
+</body>
+</html>
+
+
+<!-- 
+Steps taken:
+
+1) The api url to work with in line 15-16 ===> https://jsonplaceholder.typicode.com/posts, but /post was cut so that the url can be reused multiple times (eg, in line 22). And because /posts/=?id => has an iteration of numbers after /posts ie, /posts/1, /posts/2 etc to 100.
+
+2) Line 18 ==> get the div tag or parent element you want to insert the api data into.
+
+3) Line 20-25 ==> a function that returns a promise value using the async and await or without the async or await, your choice. Line 22 ==> also account for the /post too.
+
+The tricky part.....
+
+4) Line 27-32 ==> Creating the element/child element. This function takes an argument (post) i.e. the iterator value of (posts) which gives the actual fetch data of the api, @ line 36.
+Basically, after creating your new element in line 29, then the .textContent or .innerText value of the new child element takes post.body as its value. Meaning post.body is a valid key in the Json API... just like post.id, post.title, etc. all are keys which have corresponding values in the Json API data.
+
+5) Line 35-42 ==> Function to append the parent and newly created child element together in order to display on the screen.
+This function calls the function that returns a promise @ line 20-25. So (posts => {}) in line 36 gives the actual data. Then (post) is an iterable created to iterate through (posts) so that each Json API value can be displayed on iteration using the "for loop"
+i.e. line 37 ==> for (const post of posts) and the (post) which is an iterable was also referenced at step 4 above as an argument for the createElement() function  line 27 ==> the (post) which is an iterable of (posts) is used to access other values in the Json API data i.e. post.id, post.body, post.title etc. also used in step 4 above.
+
+
+-->
