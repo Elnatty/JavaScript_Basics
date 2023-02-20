@@ -1,3 +1,3 @@
 # JavaScript_Basics
 
-This repo includes intro to basic/intermediate consepts in JavaScript.
+This repo includes intro to basic/intermediate concepts in JavaScript.
