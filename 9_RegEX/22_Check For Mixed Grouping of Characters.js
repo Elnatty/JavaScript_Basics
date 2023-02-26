@@ -21,4 +21,4 @@ let myRegex = /(Franklin D.|Eleanor) Roosevelt/; // Change this line
 // let myRegex = /(Franklin|Eleanor).*Roosevelt/;
 let result = myRegex.test(myString)
 // After passing the challenge experiment with myString and see how the grouping works
-console.log(result)
+// console.log(result)
