@@ -26,8 +26,9 @@
 ⁡⁣⁣⁢
   some RegExp characters and their meaning.⁡
   .   --> matches all characters
-  *   --> matches all characters 0 or more times eg / [\w]* /.exec
+  *   --> matches a character 0 or more times eg / [\w]* /.exec
   +   --> matches all characters 1 or more times eg / [\w]+ /.exec
+  ?   --> matches zero or one occurrence of a character.
   []  --> a character group
   [A-Za-z] -> all UpperCase letters, and LowerCase letters
   \d  --> matches all numbers i.e [0-9]
@@ -36,7 +37,6 @@
   ^   --> beginning of a string
   $   --> ending of a string
   (|) --> represents or i.e console.log(/(hanny | natty/.test(phrase1));
-  ?   --> matches zero or one occurrence of a character.
   ()  --> group matching eg: (code | line) to match 'code or 'line
   \b  --> boundary of a word/sentence (start and end of a word) eg: /bcat/b -> matches "cat".
   /[]{}/.exec() --> matches a specific amount of characters eg: 1st 5 characters ie, /[a-z]{5}/.exec() or a range of characters eg: /[]{2,6}/.exec() from 2-6 index.
